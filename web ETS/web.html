@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="web.css">
+    <style>
+        /* Agar tabel tidak muncul pada awal */
+        #daftarWisata {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Wisata Indonesia</h1>
+        <link rel="stylesheet" href="web.css">
+    </header>
+    <div class="container">
+        <img src="pantai.jpeg" alt="gambar" style="width: 500px; height: auto;">
+        <p><b>Wisata Indonesia</b></p>
+        <p>Indonesia memiliki berbagai macam wisata yang cantik dan bersejarah</p>
+    </div>
+    <button id="tombolTampilWisata"><h2>Daftar Wisata</h2></button>
+
+    <h2>Daftar Tempat Wisata</h2>
+
+    <!-- Menambahkan ID pada tabel untuk memudahkan kontrol -->
+    <table id="daftarWisata">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Gambar</th>
+                <th>Nama Wisata</th>
+                <th>Penjelasan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><img src="borobudur.jpeg" alt="Candi Borobudur"></td>
+                <td>Candi Borobudur</td>
+                <td>Candi Buddha terbesar di dunia.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="rajaampat.jpeg" alt="Raja Ampat"></td>
+                <td>Raja Ampat</td>
+                <td>Merupakan surga tersembunyi di ujung timur Indonesia, dengan keindahan alam bawah laut yang luar biasa dan keanekaragaman hayati.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="diamondbeach.jpeg" alt="Diamond Beach"></td>
+                <td>Diamond Beach</td>
+                <td>Pantai yang terletak di Pulau Bali, lebih tepatnya berada di Kecamatan Nusa Penida, Kabupaten Klungkung.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><img src="gunungbromo.jpeg" alt="Gunung Bromo"></td>
+                <td>Wisata Gunung Bromo</td>
+                <td>Menjadi ikon pariwisata dengan segala keindahannya, terletak di Jawa Timur, gunung berapi aktif yang menawarkan pemandangan dramatis berupa siluet yang dikelilingi lautan pasir.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Ambil tombol dan tabel menggunakan id
+        const tombol = document.getElementById("tombolTampilWisata");
+        const tabel = document.getElementById("daftarWisata");
+
+        // Tambahkan event listener untuk tombol
+        tombol.addEventListener("click", function() {
+            // Toggle display tabel (muncul atau sembunyi)
+            if (tabel.style.display === "none") {
+                tabel.style.display = "table";  // Menampilkan tabel
+            } else {
+                tabel.style.display = "none";   // Menyembunyikan tabel
+            }
+        });
+    </script>
+</body>
+</html>
